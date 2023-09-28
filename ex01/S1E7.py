@@ -12,10 +12,6 @@ class Baratheon(Character):
         self.eyes = eyes
         self.hairs = hairs
 
-    def die(self):
-        """Abstract method for dying"""
-        self.is_alive = False
-
     def __repr__(self):
         """Return a string representation of the object"""
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
@@ -35,10 +31,7 @@ class Lannister(Character):
         self.eyes = eyes
         self.hairs = hairs
 
-    def die(self):
-        """Abstract method for dying"""
-        self.is_alive = False
-
+    @classmethod
     def create_lannister(first_name, is_alive):
         """Create a Lannister"""
         return Lannister(first_name, is_alive)
