@@ -12,7 +12,7 @@ class Baratheon(Character):
         self.family_name = family_name
         self.eyes = eyes
         self.hairs = hairs
-        
+
     def die(self):
         """Abstract method for dying"""
         self.is_alive = False
