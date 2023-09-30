@@ -7,9 +7,9 @@ class Character(ABC):
         """Character class __init__ method"""
         self.first_name = first_name
         self.is_alive = is_alive
-        self.family_name = None
-        self.eyes = None
-        self.hairs = None
+        # self.family_name = None
+        # self.eyes = None
+        # self.hairs = None
 
     @abstractmethod
     def die(self):

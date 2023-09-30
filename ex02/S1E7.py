@@ -6,11 +6,16 @@ class Baratheon(Character):
     def __init__(self, first_name, is_alive=True, family_name="Baratheon",
                  eyes="brown", hairs="dark"):
         """Character class __init__ method"""
-        self.first_name = first_name
-        self.is_alive = is_alive
+        # self.first_name = first_name
+        # self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
         self.family_name = family_name
         self.eyes = eyes
         self.hairs = hairs
+        
+    def die(self):
+        """Abstract method for dying"""
+        self.is_alive = False
 
     def __repr__(self):
         """Return a string representation of the object"""
@@ -25,14 +30,19 @@ class Lannister(Character):
     def __init__(self, first_name, is_alive=True, family_name="Lannister",
                  eyes="blue", hairs="light"):
         """Character class __init__ method"""
-        self.first_name = first_name
-        self.is_alive = is_alive
+        # self.first_name = first_name
+        # self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
         self.family_name = family_name
         self.eyes = eyes
         self.hairs = hairs
 
-    @staticmethod
-    def create_lannister(first_name, is_alive):
+    def die(self):
+        """Abstract method for dying"""
+        self.is_alive = False
+
+    @classmethod
+    def create_lannister(self, first_name, is_alive=True):
         """Create a Lannister"""
         return Lannister(first_name, is_alive)
 
