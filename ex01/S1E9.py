@@ -7,9 +7,9 @@ class Character(ABC):
         """Character class __init__ method"""
         self.first_name = first_name
         self.is_alive = is_alive
-        self.family_name = None
-        self.eyes = None
-        self.hairs = None
+        # self.family_name = None
+        # self.eyes = None
+        # self.hairs = None
 
     @abstractmethod
     def die(self):
@@ -19,6 +19,10 @@ class Character(ABC):
 
 class Stark(Character):
     """Class for Student in S1E9"""
+    def __init__(self, first_name, is_alive=True):
+        """Stark class __init__ method"""
+        super().__init__(first_name, is_alive)
+
     def die(self):
         """Abstract method for dying"""
         self.is_alive = False
