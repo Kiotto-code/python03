@@ -1,6 +1,6 @@
 from DiamondTrap import King
 from S1E7 import Baratheon, Lannister
-from S1E9 import Character, Stark
+from S1E9 import Character
 
 
 def main():
@@ -13,6 +13,7 @@ def main():
     print(Joffrey.get_eyes())
     print(Joffrey.get_hairs())
     print(Joffrey.__dict__)
+    print(Joffrey)
 
     print(King.__mro__)
     if (isinstance(Joffrey, King) and issubclass(King, Lannister)
